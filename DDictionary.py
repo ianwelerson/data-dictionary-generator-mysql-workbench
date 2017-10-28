@@ -68,7 +68,7 @@ def htmlDataDictionary(catalog):
       pk = ('', 'X')[bool(table.isPrimaryKeyColumn(column))]
       fk = ('', 'X')[bool(table.isForeignKeyColumn(column))]
       nn = ('', 'X')[bool(column.isNotNull)]
-      print >>htmlFile, "<tr><td>%s</td><td class='column-infos'>%s</td><td class='column-infos'>%s</td><td class='column-infos'>%s</td><td class='column-infos'>%s</td></tr>" % (column.name,nn,pk,fk,column.comment)
+      print >>htmlFile, "<tr><td>%s</td><td class='column-infos'>%s</td><td class='column-infos'>%s</td><td class='column-infos'>%s</td><td>%s</td></tr>" % (column.name,nn,pk,fk,column.comment)
     print >>htmlFile, "</table></br>"
   print >>htmlFile, "</body></html>"
   return 0
